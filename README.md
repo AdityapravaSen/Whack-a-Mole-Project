@@ -1,28 +1,29 @@
-                #Whack-A-Mole Project
+# Whack-A-Mole Project
+            
+A simple whack-a-mole mini game
 
-    A simple whack-a-mole mini game
+## Technologies used:
 
-##Technologies used:
-    HTML
-    CSS
-    JS
+HTML
+CSS
+JS
 
-##Folders:
-    css- 
-        Contains required css files
+## Folders:
+css- 
+    Contains required css files
     
-    img-
-        contains required img files
+img-
+    contains required img files
     
-    js-
-        contains required JS files
+js-
+    contains required JS files
 
-##Notes-
+## Notes-
     
-    don't contribute directly to the master branch.
-    create pull request with comments.
+don't contribute directly to the master branch.
+create pull request with comments.
 
 
-#Requirements"
+# Requirements"
 
-    NO npm scrips/packages required
+NO npm scrips/packages required
