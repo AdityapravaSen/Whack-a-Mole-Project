@@ -24,6 +24,6 @@ don't contribute directly to the master branch.
 create pull request with comments.
 
 
-# Requirements"
+# Requirements:
 
-NO npm scrips/packages required
+    NO npm scrips/packages required
