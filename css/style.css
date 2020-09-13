@@ -1,3 +1,11 @@
+/* variables */
+:root{
+    --bg-color:rgba(252, 158, 47, 0.9);
+    --heading-color:rgba(79, 14, 185, 0.99);
+    --button-color:#FF3F3F;
+    --game-color:#FA951F;
+}
+
 /* reset */
 *{
     padding: 0;
@@ -9,12 +17,17 @@ body{
     font-family:'Roboto', sans-serif;
     text-align: center;
     justify-content: center;
-    background: #1c1c1f;
-    color: rgb(19, 216, 190);
+
+    background: var(--bg-color);
+    color: #fff;
 }
 
 img{
     width:100%;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* heading */
@@ -23,6 +36,8 @@ h1{
     font-style: italic;
     padding-top: 2rem;
     padding-bottom: 2rem;
+
+    color: var(--heading-color);
 }
 
 /* scrore */
@@ -43,9 +58,15 @@ h1{
 .score-box button{
     text-align: center;
     font-size: 2rem;
+
     cursor: pointer;
+
     padding:0.3rem 1rem;
-    border-radius: 6px;
+    border-radius: 8px;
+    border: none;
+
+    background: var(--button-color);
+    color: #fff;
 }
 
 /* game */
@@ -53,14 +74,57 @@ h1{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 2rem;
+
     max-width: 60rem;
     margin-left: 18rem;
     margin-top: 1rem;
-    padding-top: 0.2rem;
-    /* background: #f5ca0e; */
+    padding: 0.2rem 0.5rem;
+
+    background: var(--game-color);
+
+    border-radius: 10px;
+
+    -webkit-box-shadow: 0px -3px 16px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -3px 16px -7px rgba(0,0,0,0.75);
+    box-shadow: 0px -3px 16px -7px rgba(0,0,0,0.75);
+}
+
+.hole{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.2rem;
 }
 
 .hole img{
-    height: 85%;
     width: 85%;
+}
+
+.mole{
+    height: 75%;
+    width: 75%;
+    
+    /* visibility: hidden; */
+
+    cursor: pointer;
+}
+
+/* footer */
+.footer{
+    text-align: left;
+    padding: 1rem 0rem 0.5rem 0.5rem;
+
+    font-size: 1rem;
+
+    color: #fff;
+}
+
+.footer a{
+    font-style: italic;
+    font-weight: 200;
+    transition: 0.5s ease;
+    color:#fff;
+}
+
+.footer a:hover{
+    color: var(--button-color);
 }
