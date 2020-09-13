@@ -34,8 +34,8 @@ a{
 h1{
     font-size: 4.5rem;
     font-style: italic;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     color: var(--heading-color);
 }
@@ -44,15 +44,15 @@ h1{
 .score-box{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 0rem 43rem;
+    justify-content: center;
+    margin: 0rem auto;
 }
 
 .score-box span{
     font-size: 2rem;
     font-weight: 200;
     text-align: center;
-    padding:0.3rem;
+    padding:0.3rem 1rem;
 }
 
 .score-box button{
@@ -80,8 +80,9 @@ h1{
     grid-gap: 2rem;
 
     max-width: 60rem;
-    margin-left: 18rem;
-    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
     padding: 0.2rem 0.5rem;
 
     background: var(--game-color);
