@@ -1,0 +1,20 @@
+/* Landscape */
+@media(max-height:415px){
+    h1{
+        font-size: 3rem;
+    }
+
+    .game-box{
+        margin-top: 1rem;
+        max-width: 42rem;
+    }
+
+    .hole img{
+        width: 60%;
+    }
+
+    .mole{
+        height: 50%;
+        width: 50%;
+    }
+}
