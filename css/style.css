@@ -108,8 +108,8 @@ h1{
 .mole{
     height: 75%;
     width: 75%;
-    
-    /* visibility: hidden; */
+
+    visibility: hidden;
 
     cursor: pointer;
 }
