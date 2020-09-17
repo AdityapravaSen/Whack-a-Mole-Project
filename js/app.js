@@ -1,11 +1,13 @@
 // variable declarations
 
 const holes = document.querySelectorAll('.hole');
+const scorecard =document.querySelector('.score');
 const moles = document.querySelectorAll('.mole');
 const start = document.querySelector('button');
 
 let lastMole;
 let timeUp = false;
+let points=0;
 
 //console.log(holes);
 
@@ -47,9 +49,21 @@ function molePop() {
 
 //function to start game
 function startGame() {
+    scorecard.textContent=0;
     timeUp = false;
+    points=0;
+
     molePop();
-    setTimeout(() => timeUp = true, 10000);
+    setTimeout(() => timeUp = true, 10000);   //moles are displayed for 10 seconds straight
 }
 
 start.addEventListener('click', startGame);    //starts the game
+
+function hit(e) {
+    if(!e.isTrusted) return ;  //in case the mouse click is simulated 
+    points+=10;
+    this.classList.add('mole');
+    scorecard.textContent=points;
+}
+
+moles.forEach(mole => mole.addEventListener('click', hit));

@@ -96,7 +96,8 @@ h1{
 }
 
 .hole{
-    display: flex;
+    /*display: flex; */
+    position: relative;
     flex-direction: column;
     padding-left: 0.2rem;
 }
