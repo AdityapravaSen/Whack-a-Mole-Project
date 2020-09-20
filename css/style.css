@@ -74,6 +74,18 @@ h1{
     background: #59a4e2;
 }
 
+/* reload button */
+.reload{
+    padding: 0.4rem 1rem;
+
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.reload:hover{
+    transform: rotate(90deg);
+}
+
 /* game */
 .game-box{
     display: grid;
