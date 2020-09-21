@@ -10,11 +10,24 @@ let lastMole;
 let timeUp = false;
 let points = 0;
 let c = 0;
+let begin=false;
 
 //function to check setTimeout()
 function count() {
     console.log(++c);
 }
+
+//function to make the start button disappear when game has started
+
+function disappear()
+{
+    if(begin!= false)
+    {
+        start.classList.add('hidden');
+        console.log("Start button hidden");
+    }
+}
+
 
 //function to set time for mole to stay up
 function randomTime() {
@@ -41,7 +54,8 @@ function randomMole(moles) {
 function molePop() {
     const time = randomTime();
     const mole = randomMole(moles);
-
+    begin=true;
+    disappear();
     mole.classList.remove('mole');
     setTimeout(() => {
         mole.classList.add('mole');

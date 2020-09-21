@@ -40,7 +40,7 @@ h1{
     color: var(--heading-color);
 }
 
-/* scrore */
+/* score */
 .score-box{
     display: flex;
     flex-direction: row;
@@ -72,6 +72,19 @@ h1{
 /* hover property added */
 .score-box button:hover{    
     background: #59a4e2;
+}
+
+.score-box button.visible{
+    visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+
+}
+
+.score-box button.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition:visibility 0s 2s , opacity 2s linear;
 }
 
 /* reload button */
