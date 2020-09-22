@@ -4,27 +4,30 @@ const holes = document.querySelectorAll('.hole');
 const scorecard = document.querySelector('.score');
 const moles = document.querySelectorAll('.mole');
 const start = document.querySelector('button');
-const restart = document.querySelector('.reload');
+const timeLeft = document.querySelector('.time-left');
+let modal = document.getElementById("myModal");
+const reload = document.querySelector('.reload');
+let modalScore = document.querySelector('.modal-score');
+let span = document.getElementsByClassName("close")[0];
 
 let lastMole;
 let timeUp = false;
 let points = 0;
-let c = 0;
-let begin=false;
+let begin = false;
+let currentTime = timeLeft.textContent;
+let timerID;
 
-//function to check setTimeout()
-function count() {
-    console.log(++c);
-}
+modalScore.textContent = 0;
 
 //function to make the start button disappear when game has started
-
-function disappear()
-{
-    if(begin!= false)
-    {
+function disappear() {
+    if (begin != false) {
         start.classList.add('hidden');
         console.log("Start button hidden");
+    }
+    else {
+        start.classList.remove('hidden');
+        console.log("Start button visible");
     }
 }
 
@@ -54,9 +57,12 @@ function randomMole(moles) {
 function molePop() {
     const time = randomTime();
     const mole = randomMole(moles);
-    begin=true;
+
+    begin = true;
     disappear();
+
     mole.classList.remove('mole');
+
     setTimeout(() => {
         mole.classList.add('mole');
 
@@ -66,44 +72,51 @@ function molePop() {
     }, time);
 }
 
-//function to disable start wile game is running
-function disableStart() {
-    start.disabled = true;
-
-    console.log("disabled");
-
-    setTimeout(() => {
-        start.disabled = false;
-    }, 15000);
-}
-
 //function to start game
 function startGame() {
     scorecard.textContent = 0;
     timeUp = false;
     points = 0;
 
-    disableStart();
     molePop();
 
     setTimeout(() => {
         timeUp = true;
-
-        count();
     }, 15000);   //moles are displayed for 15 seconds straight
+
+    timerID = setInterval(countdown, 1000);
 }
 
-// //function to restart the game
-// function restartGame() {
-//     if (window.confirm("Do you Want to Reload the Game?")) {
-//         window.location.reload();
-//     }
+//function to restart game
+function restartGame() {
+    modal.style.display = "none";
+    timeLeft.textContent = 15;
+    currentTime = timeLeft.textContent;
+    startGame();
+}
 
-// }
+function countdown() {
+    currentTime--;
+    timeLeft.textContent = currentTime;
+
+    if (currentTime === 0) {
+        clearInterval(timerID);
+
+        modal.style.display = "block";
+        modalScore.textContent = points;
+    }
+}
+
+
 
 start.addEventListener('click', startGame);    //starts the game
 
-// restart.addEventListener('click', restartGame); //restarts the game
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+reload.addEventListener('click', restartGame);
 
 function hit(e) {
     if (!e.isTrusted) return;  //in case the mouse click is simulated 
