@@ -112,11 +112,11 @@ span.onclick = function () {
 
 reload.addEventListener('click', restartGame);
 
-function wack(e) {
+function whack(e) {
     if (!e.isTrusted) return; //** new thing I learned */
     score += 10;
     this.parentNode.classList.remove('up'); //this refers to item clicked
     scoreBoard.textContent = score;
 }
 
-moles.forEach(mole => mole.addEventListener('click', wack));
+moles.forEach(mole => mole.addEventListener('click', whack));

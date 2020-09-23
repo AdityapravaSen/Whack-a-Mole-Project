@@ -107,6 +107,7 @@ h1{
     margin-right: auto;
     margin-top: 1.5rem;
     padding: 0.2rem 0.5rem;
+    cursor: crosshair;
     
     background-color:var(--game-color);
     border-radius: 10px;
@@ -154,8 +155,10 @@ h1{
 
 /* footer */
 .footer{
-    text-align: left;
-    padding: 1rem 0rem 0.5rem 0.5rem;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+
 
     font-size: 1rem;
 
