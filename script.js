@@ -120,3 +120,4 @@ function whack(e) {
 }
 
 moles.forEach(mole => mole.addEventListener('click', whack));
+moles.forEach(mole => mole.addEventListener('ontouchstart',whack));
