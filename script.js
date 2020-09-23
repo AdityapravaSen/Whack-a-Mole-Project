@@ -119,5 +119,6 @@ function whack(e) {
     scoreBoard.textContent = score;
 }
 
+
 moles.forEach(mole => mole.addEventListener('click', whack));
-moles.forEach(mole => mole.addEventListener('ontouchstart',whack));
+moles.forEach(mole => mole.addEventListener('touchstart',whack));
