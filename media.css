@@ -1,0 +1,44 @@
+/* smartphones */
+@media(max-width:425px){
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .score-box .score, .score-box button, .score-box p{
+        font-size: 1rem;
+    }
+
+    .game{
+        height: 20rem;
+    }
+
+    .hole::after{
+        width: 120%;
+    }
+}
+
+/* Landscape */
+@media(max-height:415px){
+    h1{
+        font-size: 2rem;
+    }
+
+    .score-box .score,.score-box button,.score-box p{
+        font-size: 1rem;
+    }
+
+    .game{
+        max-width: 40rem;
+        height: 18rem;
+    }
+
+    .hole::after{
+        width: 100%;
+        height: 90px;
+    }
+
+    .mole{
+        background-size: 40%;
+    }
+
+}
